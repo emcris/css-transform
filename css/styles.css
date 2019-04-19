@@ -1,0 +1,24 @@
+body{
+    background: seashell;
+}
+p{
+    font-family: Helvetica;
+}
+.scale{
+    height: 60px;
+    width: 60px;
+
+    /* This incresaes the width 10  times and the height 2 times */
+    transform: scale(10,2);
+
+    /* this decreases the width in half and the height by a quarter */
+    transform: scale(.5,.25);
+
+    /* flips the x-axis  */
+    transform: scale(-5,1);
+    transform: scaleX(-5);
+
+    /* flips the Y-axis */
+    transform: scale(1,-5);
+    transform: scaleY(-5);
+}
