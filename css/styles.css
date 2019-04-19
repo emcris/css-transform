@@ -1,5 +1,5 @@
 body{
-    background: seashell;
+    background: snow;
 }
 p{
     font-family: Helvetica;
@@ -7,18 +7,61 @@ p{
 .scale{
     height: 60px;
     width: 60px;
+    float: right;
 
     /* This incresaes the width 10  times and the height 2 times */
-    transform: scale(10,2);
+    /* transform: scale(10,2); */
 
     /* this decreases the width in half and the height by a quarter */
-    transform: scale(.5,.25);
+    /* transform: scale(.5,.25); */
 
     /* flips the x-axis  */
-    transform: scale(-5,1);
-    transform: scaleX(-5);
+    /* transform: scale(-5,1);
+    transform: scaleX(-5); */
 
     /* flips the Y-axis */
-    transform: scale(1,-5);
-    transform: scaleY(-5);
+    /* transform: scale(1,-5);
+    transform: scaleY(-5); */
+}
+.box{
+    background: seagreen;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    margin: 20px;
+}
+.skew-20{
+    transform: skewX(20deg);
+}
+.skew-neg-20{
+    /* transform: skewX(-20deg); */
+    animation: skew-horizontal 2s
+    infinite;
+    animation-direction: alternate; 
+}
+.skew-neg-50{
+    /* transform: skewX(-50deg); */
+    animation: skew-vertical .75s
+    infinite;
+    animation-direction: alternate;
+}
+
+@keyframes skew-horizontal{
+    0%{
+        transform: skewX(20deg);
+        opacity: 0;
+    }
+    100%{
+        transform: skewX(-20deg);
+        opacity: 1;
+    }
+}
+
+@keyframes skew-vertical{
+    0%{
+        transform: skewY(20deg);
+    }
+    100%{
+        transform: skewY(-20deg);
+    }
 }
